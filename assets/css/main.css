@@ -1,5 +1,27 @@
 body {
   font: 100% Calibri, sans-serif;
-  color: #444; }
+  color: #444;
+  margin: 0;
+  padding: 0; }
+
+.bandeau-cookies {
+  color: #fff;
+  padding: 20px 40px;
+  background-color: #103084;
+  font-size: 18px; }
+
+.text {
+  display: inline-block;
+  width: 90%; }
+
+.cross {
+  border: 1px #fff solid;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  float: right; }
 
 /*# sourceMappingURL=main.css.map */
