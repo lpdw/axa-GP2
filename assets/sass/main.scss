@@ -1,17 +1,22 @@
-$font-stack:    Calibri, sans-serif;
+$font-stack:  Arial, sans-serif;
 $primary-color: #444;
-
+$dark-color : #242424;
+$dark-color-transparent : rgba(36, 36, 36, 0.25);
+$light-color: #ffffff;
 body {
-  font: 100% $font-stack;
+  font-family: $font-stack;
   color: $primary-color;
-  margin: 0; padding: 0;
+  margin: 0;
+  background: url("../img/background-320.jpg") no-repeat;
+  background-position-y: 44px;
+
 }
 
 .bandeau-cookies {
   color: #fff;
   padding: 20px 40px;
   background-color: #103084;
-  font-size: 18px;
+  font-size: 0.563em;
 }
 .text {
   display: inline-block;
@@ -26,4 +31,49 @@ body {
   height: 40px;
   line-height: 40px;
   float: right;
+}
+
+
+.hexagone{
+  fill: $dark-color-transparent;
+  stroke:$light-color;
+}
+
+.hexagone-container{
+  color : $light-color;
+}
+
+.header {
+  background-color: #fff;
+  height: 40px;
+  padding: 5px;
+  line-height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.logoAXA {
+  height: 35px;
+}
+.date {
+  font-size: 23px;
+  font-weight: 700;
+}
+.hamburger {
+  width: 30px;
+  cursor: pointer;
+  .line {
+    display: block;
+    height: 5px;
+    width: 30px;
+    background-color: #000;
+    margin: 6px 0;
+  }
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 640px) {
+  .date {
+    font-size: 46px;
+  }
 }
