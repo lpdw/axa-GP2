@@ -3,7 +3,43 @@ $primary-color: #292929;
 $background-color :#f8f8f8;
 
 body {
+  margin: 0;
   font: 100% $font-stack;
   color: $primary-color;
   background-color: $background-color;
+}
+
+.header {
+  background-color: #fff;
+  height: 40px;
+  padding: 5px;
+  line-height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.logoAXA {
+  height: 35px;
+}
+.date {
+  font-size: 23px;
+  font-weight: 700;
+}
+.hamburger {
+  width: 30px;
+  cursor: pointer;
+  .line {
+    display: block;
+    height: 5px;
+    width: 30px;
+    background-color: #000;
+    margin: 6px 0;
+  }
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 640px) {
+  .date {
+    font-size: 46px;
+  }
 }
