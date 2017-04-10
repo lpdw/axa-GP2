@@ -2,7 +2,8 @@ body {
   font-family: Arial, sans-serif;
   color: #444;
   margin: 0;
-  padding: 0; }
+  background: url("../img/background-320.jpg") no-repeat;
+  background-position-y: 44px; }
 
 .bandeau-cookies {
   color: #fff;
@@ -24,63 +25,41 @@ body {
   line-height: 40px;
   float: right; }
 
-header {
-  top: 0;
-  height: 4.556em; }
-
-.menu-toggler {
-  display: none; }
-
-.menu-toggler__label {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 10px;
-  bottom: 0;
-  width: 25px;
-  height: 100%; }
-
-.menu-toggler__label:hover,
-.menu-toggler__label:focus,
-.menu-toggler__label:active {
-  cursor: pointer; }
-
-.menu-toggler__label__text {
-  position: absolute;
-  text-indent: -9999px; }
-
-.menu-toggler__label__visual span {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color: #242424;
-  transition: transform .5s, top .5s, bottom .5s, opacity .2s;
-  opacity: 1; }
-
-.menu-toggler__label__visual span:nth-child(1) {
-  top: 5px; }
-
-.menu-toggler__label__visual span:nth-child(2) {
-  top: 50%;
-  margin-top: -3px; }
-
-.menu-toggler__label__visual span:nth-child(3) {
-  bottom: 5px; }
-
-.menu-toggler:checked + .menu-toggler__label .menu-toggler__label__visual span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 19px; }
-
-.menu-toggler:checked + .menu-toggler__label .menu-toggler__label__visual span:nth-child(2) {
-  opacity: 0; }
-
-.menu-toggler:checked + .menu-toggler__label .menu-toggler__label__visual span:nth-child(3) {
-  transform: rotate(-45deg);
-  bottom: 19px; }
-
 .hexagone {
   fill: rgba(36, 36, 36, 0.25);
   stroke: #ffffff; }
+
+.hexagone-container {
+  color: #ffffff; }
+
+.header {
+  background-color: #fff;
+  height: 40px;
+  padding: 5px;
+  line-height: 40px;
+  display: flex;
+  justify-content: space-between; }
+
+.logoAXA {
+  height: 35px; }
+
+.date {
+  font-size: 23px;
+  font-weight: 700; }
+
+.hamburger {
+  width: 30px;
+  cursor: pointer; }
+  .hamburger .line {
+    display: block;
+    height: 5px;
+    width: 30px;
+    background-color: #000;
+    margin: 6px 0; }
+
+/* Media Queries */
+@media screen and (min-width: 640px) {
+  .date {
+    font-size: 46px; } }
 
 /*# sourceMappingURL=main.css.map */
