@@ -3,5 +3,5 @@
 "mappings": "AAGA,IAAK;EACH,IAAI,EAAE,wBAAgB;EACtB,KAAK,EAJS,IAAI",
 "sources": ["../sass/main.scss"],
 "names": [],
-"file": "style.css"
+"file": "main.css"
 }
