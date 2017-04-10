@@ -1,0 +1,9 @@
+$font-stack:    Calibri, sans-serif;
+$primary-color: #292929;
+$background-color :#f8f8f8;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $background-color;
+}
