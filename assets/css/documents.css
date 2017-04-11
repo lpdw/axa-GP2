@@ -44,7 +44,6 @@ main {
   padding: 0;
   margin: 0; }
   .inputs .item {
-    display: block;
     background-color: #fff;
     font-size: 12px;
     padding: 10px 10px;
@@ -54,8 +53,8 @@ main {
     align-items: center;
     font-weight: bold;
     cursor: pointer; }
-    .inputs .item .libelle::before {
-      content: "> "; }
+    .inputs .item .libelle {
+      width: 85%; }
     .inputs .item .checkbox {
       display: none; }
     .inputs .item .labelCheck {
