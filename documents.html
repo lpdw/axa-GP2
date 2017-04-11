@@ -6,6 +6,7 @@
     <title>AXA - Documents</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="assets/css/documents.css">
+    <script src="assets/js/script.js"></script>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 </head>
 
@@ -22,31 +23,76 @@
     <main role="main">
         <h1>documents</h1>
         <section>
+            <header>
+                <h2 class="section-title">Rapport personnalisé</h2>
+                <p>
+                    Télécharger ci-dessous le document personnalisé à partir de l’édition papier du <strong>rapport d'activité et de responsabilité d'entreprise 2014.</strong>
+                </p>
+            </header>
             <form class="" action="" method="post">
-              <header>
-                  <h2>Rapport personnalisé</h2>
-                  <p>
-                      Télécharger ci-dessous le document personnalisé à partir de l’édition papier du <strong>rapport d'activité et de responsabilité d'entreprise 2014.</strong>
-                  </p>
-              </header>
-              <ul>
-                  <li>
-
+              <ul class="inputs">
+                  <li class="item">
+                    <span class="libelle">Cahier “protéger ce qui nous est essentiel”</span>
+                    <input class="checkbox" type="checkbox" id="cahier" value="1">
+                    <label for="cahier" class="labelCheck">
+                      <span class="checked">
+                        <span class="icon-check">v</span>
+                      </span>
+                    </label>
                   </li>
-                  <li>
-
+                  <li class="item">
+                    <span class="libelle">Entretien avec Henri de Castries</span>
+                    <input class="checkbox" type="checkbox" id="entretien" value="2">
+                    <label for="entretien" class="labelCheck">
+                      <span class="checked">
+                        <span class="icon-check">v</span>
+                      </span>
+                    </label>
                   </li>
-                  <li>
-
+                  <li class="item" id="itemgroupe">
+                    <span class="libelle">Notre groupe</span>
+                    <input class="checkbox" type="checkbox" id="groupe" value="3">
+                    <label for="groupe" class="labelCheck">
+                      <span class="checked">
+                        <span class="icon-check">v</span>
+                      </span>
+                    </label>
                   </li>
-                  <li>
 
+                  <ul id="dropdown-groupe">
+                    <li>Notre métier</li>
+                    <li>Profil</li>
+                    <li>Faits marquants</li>
+                    <li>Résultats</li>
+                    <li>Gouvernance</li>
+                  </ul>
+
+                  <li class="item">
+                    <span class="libelle">Notre stratégie</span>
+                    <input class="checkbox" type="checkbox" id="strategie" value="4">
+                    <label for="strategie" class="labelCheck">
+                      <span class="checked">
+                        <span class="icon-check">v</span>
+                      </span>
+                    </label>
                   </li>
-                  <li>
-
+                  <li class="item">
+                    <span class="libelle">Nos activités</span>
+                    <input class="checkbox" type="checkbox" id="activites" value="5">
+                    <label for="activites" class="labelCheck">
+                      <span class="checked">
+                        <span class="icon-check">v</span>
+                      </span>
+                    </label>
                   </li>
-                  <li>
-
+                  <li class="item">
+                    <span class="libelle">Notre responsabilité d’entreprise</span>
+                    <input class="checkbox" type="checkbox" id="respo" value="6">
+                    <label for="respo" class="labelCheck">
+                      <span class="checked">
+                        <span class="icon-check">v</span>
+                      </span>
+                    </label>
                   </li>
               </ul>
           </form>
