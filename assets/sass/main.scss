@@ -3,6 +3,12 @@ $primary-color: #444;
 $dark-color : #242424;
 $dark-color-transparent : rgba(36, 36, 36, 0.25);
 $light-color: #ffffff;
+$coral-color:#f0847a;
+$light-green: #98c67f;
+$blue-green: #5a8fa6;
+$dark-yellow: #fcc04b;
+$grey-hexagon:rgb(41, 41, 41);
+
 body {
   font-family: $font-stack;
   color: $primary-color;
@@ -34,13 +40,54 @@ body {
 }
 
 
-.hexagone{
+.hexagones{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.hexagone-container{
+  width: 50%;
+}
+.hexagone_single{
   fill: $dark-color-transparent;
   stroke:$light-color;
 }
+.hexagone_single svg path{
+  width:163.046px;
+  height:142.046px;
+  stroke:$light-color;
+  stroke-width:2.031px;
+  stroke-linecap:butt;
+  stroke-linejoin:miter;
+  fill-rule:evenodd;
+  fill-opacity:0.251;
+  fill:$grey-hexagon;
 
-.hexagone-container{
-  color : $light-color;
+}
+.hexagone_single{
+  width: 50%;
+}
+.hexagone_single:hover path{
+  fill-opacity:1;
+}
+.hexagone_single:nth-child(1):hover  path {
+  fill : $coral-color;
+}
+.hexagone_single:nth-child(2):hover path {
+  fill :$light-green;
+}
+.hexagone_single:nth-child(3):hover path {
+  fill :$blue-green;
+}
+.hexagone_single:nth-child(4):hover path {
+  fill :$dark-yellow;
+}
+
+.hexagone_single:nth-child(7) , .hexagone_single:nth-child(5),.hexagone_single:nth-child(6){
+  display:none;
 }
 
 .header {
