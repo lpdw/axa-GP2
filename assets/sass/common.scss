@@ -1,0 +1,38 @@
+$font-stack:    Calibri, sans-serif;
+$primary-color: #292929;
+$background-color: #f8f8f8;
+$orange: #e79655;
+
+body {
+  margin: 0;
+  font: 100% $font-stack;
+  color: $primary-color;
+  background-color: $background-color;
+}
+
+.header {
+  background-color: #fff;
+  // height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logoAXA {
+  height: 25px;
+}
+.date {
+  font-size: 23px;
+  font-weight: bold;
+}
+.hamburger {
+  width: 30px;
+  cursor: pointer;
+  .line {
+    display: block;
+    height: 5px;
+    width: 30px;
+    background-color: #000;
+    margin: 6px 0;
+  }
+}

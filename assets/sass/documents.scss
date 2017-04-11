@@ -1,51 +1,14 @@
-$font-stack:    Calibri, sans-serif;
-$primary-color: #292929;
-$background-color: #f8f8f8;
-$orange: #e79655;
-
-body {
-  margin: 0;
-  font: 100% $font-stack;
-  color: $primary-color;
-  background-color: $background-color;
-}
-
-.header {
-  background-color: #fff;
-  height: 40px;
-  padding: 5px;
-  line-height: 40px;
-  display: flex;
-  justify-content: space-between;
-}
-.logoAXA {
-  height: 35px;
-}
-.date {
-  font-size: 23px;
-  font-weight: 700;
-}
-.hamburger {
-  width: 30px;
-  cursor: pointer;
-  .line {
-    display: block;
-    height: 5px;
-    width: 30px;
-    background-color: #000;
-    margin: 6px 0;
-  }
-}
+@import 'common';
 
 main {
   padding: 10px;
-  text-align: justify;
+  // text-align: justify;
   h1 {
     margin: 10px 0;
   }
 }
 .section-title {
-  font-weight: 700;
+  font-weight: bold;
   font-size: 14px;
   padding-bottom: 5px;
   border-bottom: 1px solid $orange;
@@ -54,35 +17,57 @@ main {
   list-style: none;
   padding: 0;
   margin: 0;
-  li {
+  .item {
     display: block;
     background-color: #fff;
+    font-size: 12px;
+    padding: 10px 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+    .libelle::before {
+      content: "> ";
+    }
+    .checkbox {
+      display: none;
+    }
+    .labelCheck {
+      cursor: pointer;
+      .checked {
+        width: 20px;
+        height: 25px;
+        line-height: 25px;
+        display: block;
+        background: url('../img/bg-input.png') center center;
+        background-size: cover;
+        text-align: center;
+        color: $orange;
+        .icon-check {
+          display: none;
+        }
+      }
+    }
+    .checkbox:checked ~ .labelCheck .checked .icon-check {
+       display: block;
+    }
+  }
+}
+#dropdown-groupe {
+  padding: 0;
+  margin: 0;
+  display: none;
+  li {
+    display: block;
     font-size: 12px;
     height: 25px;
     line-height: 25px;
     padding: 5px 10px;
+    padding-left: 25px;
     margin: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    .checkbox {
-      display: none;
-    }
-    .checked {
-      width: 20px;
-      height: 25px;
-      display: block;
-      background: url('../img/bg-input.png') center center;
-      background-size: cover;
-      text-align: center;
-      color: $orange;
-    }
-    .icon-check {
-      display: none;
-    }
-    .checkbox:checked ~ .checked .icon-check {
-       display: block;
-    }
+    font-weight: 500;
   }
 }
 
