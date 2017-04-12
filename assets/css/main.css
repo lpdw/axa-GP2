@@ -6,7 +6,10 @@ body {
 
 @media screen and (min-width: 640px) {
   .dl-button {
-    margin-right: 0 !important; } }
+    margin-right: 0 !important; }
+
+  .section-2 {
+    justify-content: space-between !important; } }
 .header {
   background-color: #fff;
   padding: 10px;
@@ -196,8 +199,8 @@ main {
       stroke: #fff;
       transition: 0.3s; }
 
-.dl-button::after {
-  content: " 6.2 Mo";
+.datasize::after {
+  content: " Mo";
   font-weight: 200; }
 
 .chevron {
@@ -209,6 +212,69 @@ main {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg); }
+
+.section-2 {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .section-2 li {
+    width: 300px;
+    display: flex; }
+    .section-2 li .content-book {
+      display: flex;
+      flex-direction: column; }
+      .section-2 li .content-book h3 {
+        margin: 5px 0;
+        font-size: 12px;
+        color: #e79655;
+        font-weight: bold; }
+      .section-2 li .content-book span {
+        font-size: 11px;
+        font-weight: 200; }
+      .section-2 li .content-book a {
+        width: 40px; }
+        .section-2 li .content-book a svg {
+          width: 40px; }
+          .section-2 li .content-book a svg path:nth-child(1) {
+            fill: #e79655;
+            transition: 0.3s; }
+          .section-2 li .content-book a svg path:nth-child(2) {
+            fill: transparent;
+            stroke: #e79655;
+            transition: 0.3s; }
+
+.section-3 ul {
+  padding: 0; }
+  .section-3 ul .cahier {
+    background-color: #fff;
+    font-size: 12px;
+    padding: 10px 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold; }
+    .section-3 ul .cahier .libelle {
+      flex: 1; }
+    .section-3 ul .cahier .size {
+      font-size: 10px;
+      margin: 0 10px;
+      font-weight: 200; }
+    .section-3 ul .cahier a svg {
+      width: 30px;
+      opacity: 0.7; }
+      .section-3 ul .cahier a svg path:nth-child(1) {
+        fill: #e79655;
+        transition: 0.3s; }
+      .section-3 ul .cahier a svg path:nth-child(2) {
+        fill: transparent;
+        stroke: #e79655;
+        transition: 0.3s; }
+    .section-3 ul .cahier a svg:hover {
+      opacity: 1; }
 
 /* Media Queries */
 @media screen and (min-width: 640px) {
