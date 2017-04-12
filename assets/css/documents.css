@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$orange".
-        on line 14 of sass/documents.scss
+        on line 16 of sass/documents.scss
 
-9: }
-10: .section-title {
-11:   font-weight: bold;
-12:   font-size: 14px;
-13:   padding-bottom: 5px;
-14:   border-bottom: 1px solid $orange;
-15: }
-16: .inputs {
-17:   list-style: none;
-18:   padding: 0;
-19:   margin: 0;
+11: }
+12: .section-title {
+13:   font-weight: bold;
+14:   font-size: 14px;
+15:   padding-bottom: 5px;
+16:   border-bottom: 1px solid $orange;
+17: }
+18: .inputs {
+19:   list-style: none;
+20:   padding: 0;
+21:   margin: 0;
 
 Backtrace:
-sass/documents.scss:14
+sass/documents.scss:16
 /usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/variable.rb:49:in `_perform'
 /usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
 /usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
@@ -70,4 +70,4 @@ sass/documents.scss:14
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$orange\".\A         on line 14 of sass/documents.scss\A \A 9: }\A 10: .section-title {\A 11:   font-weight: bold;\A 12:   font-size: 14px;\A 13:   padding-bottom: 5px;\A 14:   border-bottom: 1px solid $orange;\A 15: }\A 16: .inputs {\A 17:   list-style: none;\A 18:   padding: 0;\A 19:   margin: 0;"; }
+  content: "Error: Undefined variable: \"$orange\".\A         on line 16 of sass/documents.scss\A \A 11: }\A 12: .section-title {\A 13:   font-weight: bold;\A 14:   font-size: 14px;\A 15:   padding-bottom: 5px;\A 16:   border-bottom: 1px solid $orange;\A 17: }\A 18: .inputs {\A 19:   list-style: none;\A 20:   padding: 0;\A 21:   margin: 0;"; }

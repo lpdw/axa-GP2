@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>AXA - Documents</title>
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <link rel="stylesheet" href="assets/css/documents.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/script.js"></script>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 </head>
@@ -20,7 +20,7 @@
       <img src="assets/img/logo.svg" alt="logo" class="logoAXA">
       <span class="date">2014</span>
     </header>
-    <main role="main">
+    <main role="main" class="main-documents">
         <h1>documents</h1>
         <section>
             <header>
@@ -32,74 +32,434 @@
             <form class="" action="" method="post">
               <ul class="inputs">
                   <li class="item">
-                    <span class="libelle">Cahier “protéger ce qui nous est essentiel”</span>
-                    <input class="checkbox" type="checkbox" id="cahier" value="1">
-                    <label for="cahier" class="labelCheck">
-                      <span class="checked">
-                        <span class="icon-check">v</span>
-                      </span>
-                    </label>
-                  </li>
-                  <li class="item">
-                    <span class="libelle">Entretien avec Henri de Castries</span>
-                    <input class="checkbox" type="checkbox" id="entretien" value="2">
-                    <label for="entretien" class="labelCheck">
-                      <span class="checked">
-                        <span class="icon-check">v</span>
-                      </span>
-                    </label>
-                  </li>
-                  <li class="item" id="itemgroupe">
-                    <span class="libelle">Notre groupe</span>
-                    <input class="checkbox" type="checkbox" id="groupe" value="3">
-                    <label for="groupe" class="labelCheck">
-                      <span class="checked">
-                        <span class="icon-check">v</span>
-                      </span>
-                    </label>
+                    <div class="header-item">
+                      <svg width="11px" height="15px" class="chevron">
+                        <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                         d="M10.056,7.934 L7.959,10.045 L7.938,10.024 L2.996,14.992 L0.903,12.884 L5.837,7.925 L0.879,2.968 L3.000,0.847 L7.941,5.810 L7.960,5.791 L10.053,7.898 L10.037,7.915 L10.056,7.934 Z"/>
+                      </svg>
+                      <span class="libelle">Cahier “protéger ce qui nous est essentiel”</span>
+                      <span class="size">1.2 Mo</span>
+                      <input class="checkbox" type="checkbox" id="cahier" value="1">
+                      <label for="cahier" class="labelCheck">
+                        <span class="checked">
+                          <img src="assets/img/check.png" alt="check">
+                        </span>
+                      </label>
+                    </div>
+                    <ul class="dropdown">
+                      <li>
+                        <input type="checkbox" name="1" id="cahier1" value="cahier1" class="checkbox-small">
+                        <label for="cahier1">
+                          <span>Notre métier</span>
+                          <span class="size">246 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="2" id="cahier2" value="cahier2" class="checkbox-small">
+                        <label for="cahier2">
+                          <span>Profil</span>
+                          <span class="size">176 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="3" id="cahier3" value="cahier3" class="checkbox-small">
+                        <label for="cahier3">
+                          <span>Faits marquants</span>
+                          <span class="size">708 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="4" id="cahier4" value="cahier4" class="checkbox-small">
+                        <label for="cahier4">
+                          <span>Résultats</span>
+                          <span class="size">315 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="5" id="cahier5" value="cahier5" class="checkbox-small">
+                        <label for="cahier5">
+                          <span>Gouvernance</span>
+                          <span class="size">415 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
                   </li>
 
-                  <ul id="dropdown-groupe">
-                    <li>Notre métier</li>
-                    <li>Profil</li>
-                    <li>Faits marquants</li>
-                    <li>Résultats</li>
-                    <li>Gouvernance</li>
-                  </ul>
+                  <li class="item">
+                    <div class="header-item">
+                      <svg width="11px" height="15px" class="chevron">
+                        <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                         d="M10.056,7.934 L7.959,10.045 L7.938,10.024 L2.996,14.992 L0.903,12.884 L5.837,7.925 L0.879,2.968 L3.000,0.847 L7.941,5.810 L7.960,5.791 L10.053,7.898 L10.037,7.915 L10.056,7.934 Z"/>
+                      </svg>
+                      <span class="libelle">Entretien avec Henri de Castries</span>
+                      <span class="size">950 Ko</span>
+                      <input class="checkbox" type="checkbox" id="entretien" value="2">
+                      <label for="entretien" class="labelCheck">
+                        <span class="checked">
+                          <img src="assets/img/check.png" alt="check">
+                        </span>
+                      </label>
+                    </div>
+                    <ul class="dropdown">
+                      <li>
+                        <input type="checkbox" name="1" id="entretien1" value="entretien1" class="checkbox-small">
+                        <label for="entretien1">
+                          <span>Notre métier</span>
+                          <span class="size">246 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="2" id="entretien2" value="entretien2" class="checkbox-small">
+                        <label for="entretien2">
+                          <span>Profil</span>
+                          <span class="size">176 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="3" id="entretien3" value="entretien3" class="checkbox-small">
+                        <label for="entretien3">
+                          <span>Faits marquants</span>
+                          <span class="size">708 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="4" id="entretien4" value="entretien4" class="checkbox-small">
+                        <label for="entretien4">
+                          <span>Résultats</span>
+                          <span class="size">315 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="5" id="entretien5" value="entretien5" class="checkbox-small">
+                        <label for="entretien5">
+                          <span>Gouvernance</span>
+                          <span class="size">415 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
+                  </li>
 
                   <li class="item">
-                    <span class="libelle">Notre stratégie</span>
-                    <input class="checkbox" type="checkbox" id="strategie" value="4">
-                    <label for="strategie" class="labelCheck">
-                      <span class="checked">
-                        <span class="icon-check">v</span>
-                      </span>
-                    </label>
+                    <div class="header-item">
+                      <svg width="11px" height="15px" class="chevron">
+                        <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                         d="M10.056,7.934 L7.959,10.045 L7.938,10.024 L2.996,14.992 L0.903,12.884 L5.837,7.925 L0.879,2.968 L3.000,0.847 L7.941,5.810 L7.960,5.791 L10.053,7.898 L10.037,7.915 L10.056,7.934 Z"/>
+                      </svg>
+                      <span class="libelle">Notre groupe</span>
+                      <input class="checkbox" type="checkbox" id="groupe" value="3">
+                      <span class="size">1.6 Mo</span>
+                      <label for="groupe" class="labelCheck">
+                        <span class="checked">
+                          <img src="assets/img/check.png" alt="check">
+                        </span>
+                      </label>
+                    </div>
+
+                    <ul class="dropdown">
+                      <li>
+                        <input type="checkbox" name="1" id="groupe1" value="groupe1" class="checkbox-small">
+                        <label for="groupe1">
+                          <span>Notre métier</span>
+                          <span class="size">246 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="2" id="groupe2" value="groupe2" class="checkbox-small">
+                        <label for="groupe2">
+                          <span>Profil</span>
+                          <span class="size">176 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="3" id="groupe3" value="groupe3" class="checkbox-small">
+                        <label for="groupe3">
+                          <span>Faits marquants</span>
+                          <span class="size">708 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="4" id="groupe4" value="groupe4" class="checkbox-small">
+                        <label for="groupe4">
+                          <span>Résultats</span>
+                          <span class="size">315 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="5" id="groupe5" value="groupe5" class="checkbox-small">
+                        <label for="groupe5">
+                          <span>Gouvernance</span>
+                          <span class="size">415 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
                   </li>
+
                   <li class="item">
-                    <span class="libelle">Nos activités</span>
-                    <input class="checkbox" type="checkbox" id="activites" value="5">
-                    <label for="activites" class="labelCheck">
-                      <span class="checked">
-                        <span class="icon-check">v</span>
-                      </span>
-                    </label>
+                    <div class="header-item">
+                      <svg width="11px" height="15px" class="chevron">
+                        <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                         d="M10.056,7.934 L7.959,10.045 L7.938,10.024 L2.996,14.992 L0.903,12.884 L5.837,7.925 L0.879,2.968 L3.000,0.847 L7.941,5.810 L7.960,5.791 L10.053,7.898 L10.037,7.915 L10.056,7.934 Z"/>
+                      </svg>
+                      <span class="libelle">Notre stratégie</span>
+                      <input class="checkbox" type="checkbox" id="strategie" value="4">
+                      <span class="size">2.1 Mo</span>
+                      <label for="strategie" class="labelCheck">
+                        <span class="checked">
+                          <img src="assets/img/check.png" alt="check">
+                        </span>
+                      </label>
+                    </div>
+                    <ul class="dropdown">
+                      <li>
+                        <input type="checkbox" name="1" id="strategie1" value="strategie1" class="checkbox-small">
+                        <label for="strategie1">
+                          <span>Notre métier</span>
+                          <span class="size">246 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="2" id="strategie2" value="strategie2" class="checkbox-small">
+                        <label for="strategie2">
+                          <span>Profil</span>
+                          <span class="size">176 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="3" id="strategie3" value="strategie3" class="checkbox-small">
+                        <label for="strategie3">
+                          <span>Faits marquants</span>
+                          <span class="size">708 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="4" id="strategie4" value="strategie4" class="checkbox-small">
+                        <label for="strategie4">
+                          <span>Résultats</span>
+                          <span class="size">315 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="5" id="strategie5" value="strategie5" class="checkbox-small">
+                        <label for="strategie5">
+                          <span>Gouvernance</span>
+                          <span class="size">415 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
                   </li>
+
                   <li class="item">
-                    <span class="libelle">Notre responsabilité d’entreprise</span>
-                    <input class="checkbox" type="checkbox" id="respo" value="6">
-                    <label for="respo" class="labelCheck">
-                      <span class="checked">
-                        <span class="icon-check">v</span>
-                      </span>
-                    </label>
+                    <div class="header-item">
+                      <svg width="11px" height="15px" class="chevron">
+                        <path fill-rule="evenodd"  fill="rgb(231, 150, 85)"
+                         d="M10.056,7.934 L7.959,10.045 L7.938,10.024 L2.996,14.992 L0.903,12.884 L5.837,7.925 L0.879,2.968 L3.000,0.847 L7.941,5.810 L7.960,5.791 L10.053,7.898 L10.037,7.915 L10.056,7.934 Z"/>
+                      </svg>
+                      <span class="libelle">Nos activités</span>
+                      <input class="checkbox" type="checkbox" id="activites" value="5">
+                      <span class="size">3.4 Mo</span>
+                      <label for="activites" class="labelCheck">
+                        <span class="checked">
+                          <img src="assets/img/check.png" alt="check">
+                        </span>
+                      </label>
+                    </div>
+                    <ul class="dropdown">
+                      <li>
+                        <input type="checkbox" name="1" id="activites1" value="activites1" class="checkbox-small">
+                        <label for="activites1">
+                          <span>Notre métier</span>
+                          <span class="size">246 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="2" id="activites2" value="activites2" class="checkbox-small">
+                        <label for="activites2">
+                          <span>Profil</span>
+                          <span class="size">176 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="3" id="activites3" value="activites3" class="checkbox-small">
+                        <label for="activites3">
+                          <span>Faits marquants</span>
+                          <span class="size">708 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="4" id="activites4" value="activites4" class="checkbox-small">
+                        <label for="activites4">
+                          <span>Résultats</span>
+                          <span class="size">315 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="5" id="activites5" value="activites5" class="checkbox-small">
+                        <label for="activites5">
+                          <span>Gouvernance</span>
+                          <span class="size">415 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="item">
+                    <div class="header-item">
+                      <img src="assets/img/chevron.png" alt="chevron" class="chevron">
+                      <span class="libelle">Notre responsabilité d’entreprise</span>
+                      <input class="checkbox" type="checkbox" id="respo" value="6">
+                      <span class="size">2.3 Mo</span>
+                      <label for="respo" class="labelCheck">
+                        <span class="checked">
+                          <img src="assets/img/check.png" alt="check">
+                        </span>
+                      </label>
+                    </div>
+                    <ul class="dropdown">
+                      <li>
+                        <input type="checkbox" name="1" id="respo1" value="respo1" class="checkbox-small">
+                        <label for="respo1">
+                          <span>Notre métier</span>
+                          <span class="size">246 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="2" id="respo2" value="respo2" class="checkbox-small">
+                        <label for="respo2">
+                          <span>Profil</span>
+                          <span class="size">176 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="3" id="respo3" value="respo3" class="checkbox-small">
+                        <label for="respo3">
+                          <span>Faits marquants</span>
+                          <span class="size">708 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="4" id="respo4" value="respo4" class="checkbox-small">
+                        <label for="respo4">
+                          <span>Résultats</span>
+                          <span class="size">315 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="checkbox" name="5" id="respo5" value="respo5" class="checkbox-small">
+                        <label for="respo5">
+                          <span>Gouvernance</span>
+                          <span class="size">415 Ko</span>
+                          <span class="checked">
+                            <img src="assets/img/check.png" alt="check">
+                          </span>
+                        </label>
+                      </li>
+                    </ul>
                   </li>
               </ul>
+
+              <button type="submit" name="submit" class="dl-button">
+                <svg version="1.1" x="0px" y="0px"
+                	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                	<path class="st0" d="M30.7,58c5.9,7.1,11.9,14.3,17.8,21.4c0.4,0.5,1,0.7,1.4,0.7c0.5,0,1-0.2,1.4-0.7c5.9-7.1,11.9-14.3,17.8-21.4
+                		c1.1-1.3,0.5-3.5-1.4-3.5c-2.5,0-5,0-7.5,0c0-10.8,0-21.6,0-32.4c0-1.1-0.9-2-2-2c-5.5,0-11.1,0-16.6,0c-1.1,0-2,0.9-2,2
+                		c0,10.8,0,21.6,0,32.4c-2.5,0-5,0-7.5,0C30.2,54.5,29.6,56.7,30.7,58z"/>
+                	<path id="Polygone_1_copie_6" class="st1" d="M90.4,74.3L50,98.7L9.5,74.4l0-48.6L49.9,1.5l40.5,24.3L90.4,74.3z"/>
+                </svg>
+                <span>Télécharger</span>
+              </button>
+
           </form>
         </section>
         <section>
             <header>
-                <h2>Publication complètes</h2>
+                <h2 class="section-title">Publication complètes</h2>
             </header>
             <ul>
                 <li>
@@ -112,7 +472,7 @@
         </section>
         <section>
             <header>
-                <h2>Autres documents</h2>
+                <h2 class="section-title">Autres documents</h2>
 
             </header>
             <ul>
