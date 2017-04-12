@@ -2,6 +2,8 @@
 
 main {
   padding: 10px;
+  max-width: 680px;
+  margin: auto;
   // text-align: justify;
   h1 {
     margin: 10px 0;
@@ -17,60 +19,177 @@ main {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-bottom: 20px;
   .item {
-    background-color: #fff;
-    font-size: 12px;
-    padding: 10px 10px;
-    margin: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    cursor: pointer;
-    .libelle {
-      width: 85%;
-    }
-    .libelle::before {
-      // content: "> ";
-    }
-    .checkbox {
-      display: none;
-    }
-    .labelCheck {
+    .header-item {
+      background-color: #fff;
+      font-size: 12px;
+      padding: 10px 10px;
+      margin: 5px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
       cursor: pointer;
-      .checked {
-        width: 20px;
+      .libelle {
+        width: 70%;
+        margin-left: 5px;
+        flex: 1;
+      }
+      .size {
+        font-size: 10px;
+        font-weight: 200;
+        margin-right: 10px;
+      }
+      .labelCheck {
+        cursor: pointer;
+        .checked {
+          opacity: 0.5;
+          width: 20px;
+          height: 25px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url('../img/bg-input.png') center center;
+          background-size: cover;
+          text-align: center;
+          color: $orange;
+          img {
+            width: 12px;
+            display: none;
+          }
+        }
+      }
+      .checkbox {
+        opacity: 0;
+        position: absolute;
+        left: -1000px;
+      }
+      .checkbox:checked ~ .labelCheck .checked {
+         opacity: 1;
+         img {
+           display: inline-block;
+         }
+      }
+    }
+    .dropdown {
+      padding: 0;
+      margin: 0px;
+      display: none;
+      li {
+        list-style: none;
+        font-size: 12px;
         height: 25px;
         line-height: 25px;
-        display: block;
-        background: url('../img/bg-input.png') center center;
-        background-size: cover;
-        text-align: center;
-        color: $orange;
-        .icon-check {
-          display: none;
+        padding: 5px 10px;
+        padding-left: 25px;
+        margin: 5px 0;
+        font-weight: 400;
+        label {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span:first-child {
+            flex: 1;
+          }
+          .checked {
+            margin-right: 2px;
+            opacity: 0.5;
+            width: 15px;
+            height: 19px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('../img/bg-input.png') center center;
+            background-size: cover;
+            text-align: center;
+            color: $orange;
+            img {
+              width: 8px;
+              display: none;
+            }
+          }
+          .size {
+            font-weight: 200;
+            font-size: 10px;
+            margin-right: 10px;
+          }
+        }
+        .checkbox-small {
+          opacity: 0;
+          position: absolute;
+          left: -1000px;
+        }
+        .checkbox-small:checked ~ label .checked {
+          opacity: 1;
+          img {
+             display: inline-block;
+          }
         }
       }
     }
-    .checkbox:checked ~ .labelCheck .checked .icon-check {
-       display: block;
+  }
+}
+.dl-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  width: 200px;
+  padding: 10px 5px;
+  border: 1px $orange solid;
+  color: $orange;
+  margin: auto;
+  background-color: $background-color;
+  font-weight: 600;
+  transition: 0.3s;
+  outline: none;
+  svg {
+    width: 40px;
+    path:nth-child(1) {
+        fill: $orange;
+        transition: 0.3s;
+    }
+    path:nth-child(2) {
+        fill: transparent;
+        stroke: $orange;
+        transition: 0.3s;
     }
   }
 }
-#dropdown-groupe {
-  padding: 0;
-  margin: 0px;
-  display: none;
-  li {
-    display: block;
-    font-size: 12px;
-    height: 25px;
-    line-height: 25px;
-    padding: 5px 10px;
-    padding-left: 25px;
-    margin: 5px 0;
-    font-weight: 500;
+.dl-button:hover {
+  background-color: $orange;
+  color: #fff;
+  transition: 0.3s;
+  svg {
+    width: 40px;
+    path:nth-child(1) {
+        fill: #fff;
+        transition: 0.3s;
+    }
+    path:nth-child(2) {
+        stroke: #fff;
+        transition: 0.3s;
+    }
   }
+}
+.dl-button::before {
+  // content: "V ";
+}
+.dl-button::after {
+  content: " 6.2 Mo";
+  font-weight: 200;
+}
+.chevron {
+  transition: 0.5s;
+}
+.rotate {
+  transition: 0.5s;
+  transform:rotate(90deg);
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -o-transform:rotate(90deg);
 }
 
 /* Media Queries */

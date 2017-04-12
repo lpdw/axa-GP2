@@ -4,6 +4,9 @@ body {
   color: #292929;
   background-color: #f8f8f8; }
 
+@media screen and (min-width: 640px) {
+  .dl-button {
+    margin-right: 0 !important; } }
 .header {
   background-color: #fff;
   padding: 10px;
@@ -49,7 +52,9 @@ body {
   float: right; }
 
 main {
-  padding: 10px; }
+  padding: 10px;
+  max-width: 680px;
+  margin: auto; }
   main h1 {
     margin: 10px 0; }
 
@@ -62,8 +67,9 @@ main {
 .inputs {
   list-style: none;
   padding: 0;
-  margin: 0; }
-  .inputs .item {
+  margin: 0;
+  margin-bottom: 20px; }
+  .inputs .item .header-item {
     background-color: #fff;
     font-size: 12px;
     padding: 10px 10px;
@@ -73,39 +79,136 @@ main {
     align-items: center;
     font-weight: bold;
     cursor: pointer; }
-    .inputs .item .libelle {
-      width: 85%; }
-    .inputs .item .checkbox {
-      display: none; }
-    .inputs .item .labelCheck {
+    .inputs .item .header-item .libelle {
+      width: 70%;
+      margin-left: 5px;
+      flex: 1; }
+    .inputs .item .header-item .size {
+      font-size: 10px;
+      font-weight: 200;
+      margin-right: 10px; }
+    .inputs .item .header-item .labelCheck {
       cursor: pointer; }
-      .inputs .item .labelCheck .checked {
+      .inputs .item .header-item .labelCheck .checked {
+        opacity: 0.5;
         width: 20px;
         height: 25px;
-        line-height: 25px;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background: url("../img/bg-input.png") center center;
         background-size: cover;
         text-align: center;
         color: #e79655; }
-        .inputs .item .labelCheck .checked .icon-check {
+        .inputs .item .header-item .labelCheck .checked img {
+          width: 12px;
           display: none; }
-    .inputs .item .checkbox:checked ~ .labelCheck .checked .icon-check {
-      display: block; }
+    .inputs .item .header-item .checkbox {
+      opacity: 0;
+      position: absolute;
+      left: -1000px; }
+    .inputs .item .header-item .checkbox:checked ~ .labelCheck .checked {
+      opacity: 1; }
+      .inputs .item .header-item .checkbox:checked ~ .labelCheck .checked img {
+        display: inline-block; }
+  .inputs .item .dropdown {
+    padding: 0;
+    margin: 0px;
+    display: none; }
+    .inputs .item .dropdown li {
+      list-style: none;
+      font-size: 12px;
+      height: 25px;
+      line-height: 25px;
+      padding: 5px 10px;
+      padding-left: 25px;
+      margin: 5px 0;
+      font-weight: 400; }
+      .inputs .item .dropdown li label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .inputs .item .dropdown li label span:first-child {
+          flex: 1; }
+        .inputs .item .dropdown li label .checked {
+          margin-right: 2px;
+          opacity: 0.5;
+          width: 15px;
+          height: 19px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: url("../img/bg-input.png") center center;
+          background-size: cover;
+          text-align: center;
+          color: #e79655; }
+          .inputs .item .dropdown li label .checked img {
+            width: 8px;
+            display: none; }
+        .inputs .item .dropdown li label .size {
+          font-weight: 200;
+          font-size: 10px;
+          margin-right: 10px; }
+      .inputs .item .dropdown li .checkbox-small {
+        opacity: 0;
+        position: absolute;
+        left: -1000px; }
+      .inputs .item .dropdown li .checkbox-small:checked ~ label .checked {
+        opacity: 1; }
+        .inputs .item .dropdown li .checkbox-small:checked ~ label .checked img {
+          display: inline-block; }
 
-#dropdown-groupe {
-  padding: 0;
-  margin: 0px;
-  display: none; }
-  #dropdown-groupe li {
-    display: block;
-    font-size: 12px;
-    height: 25px;
-    line-height: 25px;
-    padding: 5px 10px;
-    padding-left: 25px;
-    margin: 5px 0;
-    font-weight: 500; }
+.dl-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  width: 200px;
+  padding: 10px 5px;
+  border: 1px #e79655 solid;
+  color: #e79655;
+  margin: auto;
+  background-color: #f8f8f8;
+  font-weight: 600;
+  transition: 0.3s;
+  outline: none; }
+  .dl-button svg {
+    width: 40px; }
+    .dl-button svg path:nth-child(1) {
+      fill: #e79655;
+      transition: 0.3s; }
+    .dl-button svg path:nth-child(2) {
+      fill: transparent;
+      stroke: #e79655;
+      transition: 0.3s; }
+
+.dl-button:hover {
+  background-color: #e79655;
+  color: #fff;
+  transition: 0.3s; }
+  .dl-button:hover svg {
+    width: 40px; }
+    .dl-button:hover svg path:nth-child(1) {
+      fill: #fff;
+      transition: 0.3s; }
+    .dl-button:hover svg path:nth-child(2) {
+      stroke: #fff;
+      transition: 0.3s; }
+
+.dl-button::after {
+  content: " 6.2 Mo";
+  font-weight: 200; }
+
+.chevron {
+  transition: 0.5s; }
+
+.rotate {
+  transition: 0.5s;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg); }
 
 /* Media Queries */
 @media screen and (min-width: 640px) {
