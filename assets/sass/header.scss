@@ -1,11 +1,11 @@
 
 .header {
   background-color: #fff;
-  // height: 40px;
-  padding: 10px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  height: 100px;
 }
 .logoAXA {
   height: 25px;
@@ -28,9 +28,22 @@
 
 .bandeau-cookies {
   color: #fff;
-  padding: 20px 40px;
+  padding: 10px;
   background-color: #103084;
   font-size: 0.563em;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bandeau-cookies button{
+  background: none;
+  border: 1px solid $light-color;
+  border-radius: 50%;
+  color: $light-color;
+  width: 25px;
+  height:25px;
 }
 .text {
   display: inline-block;
@@ -45,4 +58,13 @@
   height: 40px;
   line-height: 40px;
   float: right;
+}
+
+.header-container{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    padding: 5px;
 }
