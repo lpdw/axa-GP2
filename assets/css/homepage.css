@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$dark-color-transparent".
-        on line 14 of sass/homepage.scss
+        on line 46 of sass/homepage.scss
 
-9: }
-10: .hexagone-container{
-11:   width: 50%;
-12: }
-13: .hexagone_single{
-14:   fill: $dark-color-transparent;
-15:   stroke:$light-color;
-16: }
-17: .hexagone_single svg path{
-18:   width:163.046px;
-19:   height:142.046px;
+41: .hexagone-container {
+42:     width: 50%;
+43: }
+44: 
+45: .hexagone_single {
+46:     fill: $dark-color-transparent;
+47:     stroke: $light-color;
+48:     position: absolute;
+49:     width: 57.8%;
+50:     height: 39.4%;
+51: 
 
 Backtrace:
-sass/homepage.scss:14
+sass/homepage.scss:46
 /usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/variable.rb:49:in `_perform'
 /usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/script/tree/node.rb:58:in `perform'
 /usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -66,4 +66,4 @@ sass/homepage.scss:14
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$dark-color-transparent\".\A         on line 14 of sass/homepage.scss\A \A 9: }\A 10: .hexagone-container{\A 11:   width: 50%;\A 12: }\A 13: .hexagone_single{\A 14:   fill: $dark-color-transparent;\A 15:   stroke:$light-color;\A 16: }\A 17: .hexagone_single svg path{\A 18:   width:163.046px;\A 19:   height:142.046px;"; }
+  content: "Error: Undefined variable: \"$dark-color-transparent\".\A         on line 46 of sass/homepage.scss\A \A 41: .hexagone-container {\A 42:     width: 50%;\A 43: }\A 44: \A 45: .hexagone_single {\A 46:     fill: $dark-color-transparent;\A 47:     stroke: $light-color;\A 48:     position: absolute;\A 49:     width: 57.8%;\A 50:     height: 39.4%;\A 51: "; }

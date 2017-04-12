@@ -1,3 +1,17 @@
+@media screen and (min-height: 900px) {
+  .hexagone_single {
+    width: 293px;
+    height: 256.9px; }
 
+  .hexagone_single:nth-child(2) {
+    left: 38%;
+    top: 19.3%; }
+
+  .hexagone_single:nth-child(3) {
+    top: 38.76%; }
+
+  .hexagone_single:nth-child(4) {
+    top: 58%;
+    left: 38%; } }
 
 /*# sourceMappingURL=media-queries-640.css.map */
