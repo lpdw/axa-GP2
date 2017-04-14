@@ -67,15 +67,28 @@
       }
       .checkbox:checked ~ .labelCheck .checked {
          opacity: 1;
-         img {
-           display: inline-block;
+        //  img.check {
+        //    display: inline-block;
+        //  }
+        //  img.tiret {
+        //    display: none;
+        //  }
+         .showimg {
+           display: inline-block !important;
+         }
+         .hideimg {
+           display: none !important;
          }
       }
     }
+    .hide {
+      visibility: hidden;
+      position: absolute;
+    }
     .dropdown {
       padding: 0;
-      margin: 0px;
-      display: none;
+      margin: 0;
+      height: auto;
       li {
         list-style: none;
         font-size: 12px;
@@ -198,22 +211,24 @@
   flex-wrap: wrap;
   li {
     width: 300px;
-    display: flex;
-    .content-book {
+    a {
+      text-decoration: none;
       display: flex;
-      flex-direction: column;
-      h3 {
-        margin: 5px 0;
-        font-size: 12px;
-        color: $orange;
-        font-weight: bold;
-      }
-      span {
-        font-size: 11px;
-        font-weight: 200;
-      }
-      a {
-        width: 40px;
+      opacity: 0.8;
+      .content-book {
+        display: flex;
+        flex-direction: column;
+        h3 {
+          margin: 5px 0;
+          font-size: 12px;
+          color: $orange;
+          font-weight: bold;
+        }
+        span {
+          font-size: 11px;
+          font-weight: 200;
+          color: #000;
+        }
         svg {
           width: 40px;
           path:nth-child(1) {
@@ -228,6 +243,9 @@
         }
       }
     }
+    a:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -239,32 +257,38 @@
       font-size: 12px;
       padding: 10px 10px;
       margin: 5px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       font-weight: bold;
-      .libelle {
-        flex: 1;
-      }
-      .size {
-        font-size: 10px;
-        margin: 0 10px;
-        font-weight: 200;
-      }
-       a svg {
-        width: 30px;
+      list-style: none;
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #000;
+        font-style: normal;
+        text-decoration: none;
         opacity: 0.7;
-        path:nth-child(1) {
-            fill: $orange;
-            transition: 0.3s;
+        .libelle {
+          flex: 1;
         }
-        path:nth-child(2) {
-            fill: transparent;
-            stroke: $orange;
-            transition: 0.3s;
+        .size {
+          font-size: 10px;
+          margin: 0 10px;
+          font-weight: 200;
+        }
+         svg {
+          width: 30px;
+          path:nth-child(1) {
+              fill: $orange;
+              transition: 0.3s;
+          }
+          path:nth-child(2) {
+              fill: transparent;
+              stroke: $orange;
+              transition: 0.3s;
+          }
         }
       }
-      a svg:hover {
+      a:hover {
         opacity: 1;
       }
     }

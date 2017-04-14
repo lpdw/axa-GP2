@@ -139,18 +139,7 @@ nav {
     fill: $blue-green;
 }
 
-.hexagone_single:nth-child(4):hover a span .more {
-    display: block;
-}
-.hexagone_single:nth-child(1):hover a span .more {
-    display: block;
-}
-
-.hexagone_single:nth-child(2):hover a span .more {
-    display: block;
-}
-
-.hexagone_single:nth-child(3):hover a span .more {
+.hexagone_single:hover a span .more {
     display: block;
 }
 

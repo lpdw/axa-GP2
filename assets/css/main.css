@@ -130,12 +130,17 @@ body {
       left: -1000px; }
     .inputs .item .header-item .checkbox:checked ~ .labelCheck .checked {
       opacity: 1; }
-      .inputs .item .header-item .checkbox:checked ~ .labelCheck .checked img {
-        display: inline-block; }
+      .inputs .item .header-item .checkbox:checked ~ .labelCheck .checked .showimg {
+        display: inline-block !important; }
+      .inputs .item .header-item .checkbox:checked ~ .labelCheck .checked .hideimg {
+        display: none !important; }
+  .inputs .item .hide {
+    visibility: hidden;
+    position: absolute; }
   .inputs .item .dropdown {
     padding: 0;
-    margin: 0px;
-    display: none; }
+    margin: 0;
+    height: auto; }
     .inputs .item .dropdown li {
       list-style: none;
       font-size: 12px;
@@ -239,30 +244,34 @@ body {
   justify-content: center;
   flex-wrap: wrap; }
   .section-2 li {
-    width: 300px;
-    display: flex; }
-    .section-2 li .content-book {
+    width: 300px; }
+    .section-2 li a {
+      text-decoration: none;
       display: flex;
-      flex-direction: column; }
-      .section-2 li .content-book h3 {
-        margin: 5px 0;
-        font-size: 12px;
-        color: #e79655;
-        font-weight: bold; }
-      .section-2 li .content-book span {
-        font-size: 11px;
-        font-weight: 200; }
-      .section-2 li .content-book a {
-        width: 40px; }
-        .section-2 li .content-book a svg {
+      opacity: 0.8; }
+      .section-2 li a .content-book {
+        display: flex;
+        flex-direction: column; }
+        .section-2 li a .content-book h3 {
+          margin: 5px 0;
+          font-size: 12px;
+          color: #e79655;
+          font-weight: bold; }
+        .section-2 li a .content-book span {
+          font-size: 11px;
+          font-weight: 200;
+          color: #000; }
+        .section-2 li a .content-book svg {
           width: 40px; }
-          .section-2 li .content-book a svg path:nth-child(1) {
+          .section-2 li a .content-book svg path:nth-child(1) {
             fill: #e79655;
             transition: 0.3s; }
-          .section-2 li .content-book a svg path:nth-child(2) {
+          .section-2 li a .content-book svg path:nth-child(2) {
             fill: transparent;
             stroke: #e79655;
             transition: 0.3s; }
+    .section-2 li a:hover {
+      opacity: 1; }
 
 .section-3 ul {
   padding: 0; }
@@ -271,27 +280,32 @@ body {
     font-size: 12px;
     padding: 10px 10px;
     margin: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold; }
-    .section-3 ul .cahier .libelle {
-      flex: 1; }
-    .section-3 ul .cahier .size {
-      font-size: 10px;
-      margin: 0 10px;
-      font-weight: 200; }
-    .section-3 ul .cahier a svg {
-      width: 30px;
+    font-weight: bold;
+    list-style: none; }
+    .section-3 ul .cahier a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #000;
+      font-style: normal;
+      text-decoration: none;
       opacity: 0.7; }
-      .section-3 ul .cahier a svg path:nth-child(1) {
-        fill: #e79655;
-        transition: 0.3s; }
-      .section-3 ul .cahier a svg path:nth-child(2) {
-        fill: transparent;
-        stroke: #e79655;
-        transition: 0.3s; }
-    .section-3 ul .cahier a svg:hover {
+      .section-3 ul .cahier a .libelle {
+        flex: 1; }
+      .section-3 ul .cahier a .size {
+        font-size: 10px;
+        margin: 0 10px;
+        font-weight: 200; }
+      .section-3 ul .cahier a svg {
+        width: 30px; }
+        .section-3 ul .cahier a svg path:nth-child(1) {
+          fill: #e79655;
+          transition: 0.3s; }
+        .section-3 ul .cahier a svg path:nth-child(2) {
+          fill: transparent;
+          stroke: #e79655;
+          transition: 0.3s; }
+    .section-3 ul .cahier a:hover {
       opacity: 1; }
 
 /* Media Queries */
@@ -401,16 +415,7 @@ nav {
 .hexagone_single:nth-child(3):hover .hexagon path {
   fill: #5a8fa6; }
 
-.hexagone_single:nth-child(4):hover a span .more {
-  display: block; }
-
-.hexagone_single:nth-child(1):hover a span .more {
-  display: block; }
-
-.hexagone_single:nth-child(2):hover a span .more {
-  display: block; }
-
-.hexagone_single:nth-child(3):hover a span .more {
+.hexagone_single:hover a span .more {
   display: block; }
 
 .hexagone_single:nth-child(4):hover .hexagon path {
