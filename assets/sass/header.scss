@@ -52,7 +52,9 @@ cursor: pointer;
     }
 
 }
-
+.is-hidden{
+  display: none;
+}
 .text {
     display: inline-block;
     width: 90%;
@@ -76,4 +78,5 @@ cursor: pointer;
     align-items: center;
     width: 100vw;
     padding: 5px;
+    height: 100%;
 }
