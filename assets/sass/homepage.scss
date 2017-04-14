@@ -1,5 +1,5 @@
 html {
-    height: 100%;
+    height: 100vh;
 }
 
 .body-homepage {
@@ -7,26 +7,33 @@ html {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    background-image: url("../img/background-full.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 60px;
 }
 
 .main-homepage {
-    height: calc(100% - 100px);
+    height: calc(100% - 100px - 39.5px);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
-    background-image: url("../img/background-full.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+}
+
+.main-homepage h1 {
+    display: none;
 }
 
 nav {
     position: relative;
     // width: 86.56%;
-    width: 240px;
-    height: 300px;
+    width: calc( 100vw * 0.8656);
+  height: calc( 100vw * 0.8537);
+
+
     // max-height: 650px;
 }
 
@@ -47,14 +54,14 @@ nav {
     fill: $dark-color-transparent;
     stroke: $light-color;
     position: absolute;
-    width: 57.8%;
-    height: 39.4%;
+    width: 66.8%;
+  height: 39.4%;
 
     p {
         text-align: center;
         // position: absolute;
         // font-size: 3vw;
-        font-size: 14px;
+        font-size: 3vw;
         font-weight: 800;
         width: 60%;
         // flex-grow: 1;
@@ -87,9 +94,10 @@ nav {
     }
 
     .more {
-        // width: 3.80%;
-        width: 12px;
+        width: 6.56%;
+        //width: 12px;
         fill: $light-color;
+        stroke: transparent;
         // position: absolute;
         // left: 47%;
         // top: 67%;
@@ -139,9 +147,6 @@ nav {
     fill: $blue-green;
 }
 
-.hexagone_single:nth-child(4):hover a span .more {
-    display: block;
-}
 .hexagone_single:nth-child(1):hover a span .more {
     display: block;
 }
@@ -154,6 +159,22 @@ nav {
     display: block;
 }
 
+.hexagone_single:nth-child(4):hover a span .more {
+    display: block;
+}
+
+.hexagone_single:nth-child(5):hover a span .more {
+    display: block;
+}
+
+.hexagone_single:nth-child(6):hover a span .more {
+    display: block;
+}
+
+.hexagone_single:nth-child(7):hover a span .more {
+    display: block;
+}
+
 .hexagone_single:nth-child(4):hover .hexagon path {
     fill: $dark-yellow;
 }
@@ -161,6 +182,52 @@ nav {
 .hexagone_single:nth-child(5),
 .hexagone_single:nth-child(6),
 .hexagone_single:nth-child(7) {
+    display: none;
+}
+
+footer {
+    height: 39.5px;
+    width: 39.5px;
+}
+
+.footer-share {
+    ul {
+        margin: 0;
+        padding: 5px;
+        list-style-type: none;
+        width: 39.5px;
+        height: 39.5px;
+        background-color: #090907;
+        text-align: center;
+
+        li {
+            height: calc(100% - 5px);
+            /* padding: 10px 0; */
+            width: calc(100% - 5px);
+            /* margin-left: 0; */
+            text-align: center;
+
+            img {
+                width: 100%;
+            }
+        }
+        li:nth-child(2) {
+            display: none;
+        }
+    }
+
+    a {
+        color: $light-color;
+        text-decoration: none;
+    }
+}
+
+.footer-legal,
+.footer-social {
+    display: none;
+}
+
+.header-year span:first-of-type {
     display: none;
 }
 /* Media Queries */
