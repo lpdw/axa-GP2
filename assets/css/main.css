@@ -23,14 +23,12 @@ body {
   font-weight: bold; }
 
 .hamburger {
-  width: 30px;
+  width: 54px;
+  height: 44px;
   cursor: pointer; }
-  .hamburger .line {
-    display: block;
-    height: 5px;
-    width: 30px;
-    background-color: #000;
-    margin: 6px 0; }
+  .hamburger svg {
+    width: 100%;
+    height: 100%; }
 
 .bandeau-cookies {
   color: #fff;
@@ -41,14 +39,18 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center; }
-
-.bandeau-cookies button {
-  background: none;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  color: #ffffff;
-  width: 25px;
-  height: 25px; }
+  .bandeau-cookies button {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #ffffff;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer; }
+    .bandeau-cookies button svg {
+      fill: #ffffff; }
 
 .text {
   display: inline-block;
@@ -313,30 +315,34 @@ body {
   .date {
     font-size: 46px; } }
 html {
-  height: 100%; }
+  height: 100vh; }
 
 .body-homepage {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%; }
+  height: 100%;
+  background-image: url("../img/background-full.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: 60px; }
 
 .main-homepage {
-  height: calc(100% - 100px);
+  height: calc(100% - 100px - 39.5px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
-  background-image: url("../img/background-full.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; }
+  flex-grow: 1; }
+
+.main-homepage h1 {
+  display: none; }
 
 nav {
   position: relative;
-  width: 240px;
-  height: 300px; }
+  width: calc( 100vw * 0.8656);
+  height: calc( 100vw * 0.8537); }
 
 .hexagones {
   padding: 0;
@@ -353,11 +359,11 @@ nav {
   fill: rgba(36, 36, 36, 0.25);
   stroke: #ffffff;
   position: absolute;
-  width: 57.8%;
+  width: 66.8%;
   height: 39.4%; }
   .hexagone_single p {
     text-align: center;
-    font-size: 14px;
+    font-size: 3vw;
     font-weight: 800;
     width: 60%;
     margin: 0; }
@@ -379,8 +385,9 @@ nav {
     fill-opacity: 0.251;
     fill: #292929; }
   .hexagone_single .more {
-    width: 12px;
+    width: 6.56%;
     fill: #ffffff;
+    stroke: transparent;
     margin-top: 10px;
     display: none; }
   .hexagone_single .content-hexa {
@@ -418,12 +425,57 @@ nav {
 .hexagone_single:hover a span .more {
   display: block; }
 
+.hexagone_single:nth-child(4):hover a span .more {
+  display: block; }
+
+.hexagone_single:nth-child(5):hover a span .more {
+  display: block; }
+
+.hexagone_single:nth-child(6):hover a span .more {
+  display: block; }
+
+.hexagone_single:nth-child(7):hover a span .more {
+  display: block; }
+
 .hexagone_single:nth-child(4):hover .hexagon path {
   fill: #fcc04b; }
 
 .hexagone_single:nth-child(5),
 .hexagone_single:nth-child(6),
 .hexagone_single:nth-child(7) {
+  display: none; }
+
+footer {
+  height: 39.5px;
+  width: 39.5px; }
+
+.footer-share ul {
+  margin: 0;
+  padding: 5px;
+  list-style-type: none;
+  width: 39.5px;
+  height: 39.5px;
+  background-color: #090907;
+  text-align: center; }
+  .footer-share ul li {
+    height: calc(100% - 5px);
+    /* padding: 10px 0; */
+    width: calc(100% - 5px);
+    /* margin-left: 0; */
+    text-align: center; }
+    .footer-share ul li img {
+      width: 100%; }
+  .footer-share ul li:nth-child(2) {
+    display: none; }
+.footer-share a {
+  color: #ffffff;
+  text-decoration: none; }
+
+.footer-legal,
+.footer-social {
+  display: none; }
+
+.header-year span:first-of-type {
   display: none; }
 
 /* Media Queries */
@@ -435,12 +487,50 @@ nav {
     margin-right: 0 !important; }
 
   .section-2 {
-    justify-content: space-between !important; }
-
-  .main-homepage nav {
-    width: 360px;
-    height: 450px; } }
+    justify-content: space-between !important; } }
 @media screen and (min-width: 960px) {
+  .bandeau-cookies,
+  .hamburger {
+    display: none; }
+
+  .header-container {
+    height: 100%;
+    padding: 0 50px; }
+
+  .header-container span:first-of-type {
+    display: block; }
+
+  .header-year {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    font-weight: bold; }
+    .header-year span:first-of-type {
+      max-width: 50px;
+      font-size: 14px; }
+    .header-year .date {
+      font-size: 26px; }
+
+  .logoAXA {
+    height: 45px; }
+
+  .header {
+    height: 82px; }
+
+  .main-homepage h1 {
+    display: block;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    left: 150px;
+    top: 100px;
+    position: absolute;
+    max-width: 150px; }
+
+  .main-homepage {
+    height: calc(100% - 82px - 65px); }
+
   .main-homepage nav {
     width: 760px;
     height: 650px;
@@ -453,23 +543,114 @@ nav {
         z-index: 999; }
         .main-homepage nav ul .hexagone_single .content-hexa p {
           font-size: 16px; }
-    .main-homepage nav ul .hexagone_single:nth-child(2) {
+    .main-homepage nav ul .hexagone_single:nth-child(3) {
       top: 0;
       left: 28.4%; }
-    .main-homepage nav ul .hexagone_single:nth-child(3) {
-      top: 28.9%;
-      left: 14.1%; }
     .main-homepage nav ul .hexagone_single:nth-child(4) {
-      top: 28.9%;
-      left: 42.5%; }
+      left: 56.8%;
+      top: 0; }
     .main-homepage nav ul .hexagone_single:nth-child(5) {
       display: block;
       position: absolute;
-      left: 56.8%; }
+      top: 28.9%;
+      left: 14.1%; }
     .main-homepage nav ul .hexagone_single:nth-child(6) {
       display: block;
       position: absolute;
       top: 28.9%;
-      left: 71%; } }
+      left: 42.6%; }
+    .main-homepage nav ul .hexagone_single:nth-child(7) {
+      display: block;
+      position: absolute;
+      top: 28.9%;
+      left: 70.9%; }
+    .main-homepage nav ul .hexagone_single:nth-child(2) {
+      visibility: hidden; }
+    .main-homepage nav ul .hexagone_single:nth-child(5):hover .hexagon path {
+      fill: #a69d57; }
+    .main-homepage nav ul .hexagone_single:nth-child(6):hover .hexagon path {
+      fill: #98c67f; }
+    .main-homepage nav ul .hexagone_single:nth-child(7):hover .hexagon path {
+      fill: #e79655; }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #ffffff;
+    font-weight: lighter;
+    height: 65px;
+    width: 100vw;
+    font-size: 12px; }
+    footer section {
+      width: 33.33%; }
+    footer .footer-share ul {
+      background-color: #232321;
+      height: 100%; }
+    footer .footer-share li {
+      height: 50%; }
+    footer .footer-share li:nth-child(2) {
+      display: block;
+      margin-top: 5px; }
+    footer .footer-share li:first-of-type {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 5px; }
+    footer .footer-legal p {
+      position: absolute;
+      bottom: 5px;
+      width: inherit;
+      margin: 0; }
+    footer .footer-social {
+      text-align: right;
+      opacity: 0.7;
+      margin: 0;
+      padding: 0;
+      height: 65px;
+      width: 234px;
+      text-align: right;
+      opacity: 0.7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      footer .footer-social span {
+        width: 100%;
+        margin-right: 0;
+        font-size: 12px;
+        padding-right: 13px; }
+      footer .footer-social ul {
+        margin: 0;
+        padding: 5px 0;
+        height: calc(100% - 15px);
+        margin: 0;
+        padding: 0;
+        /* height: 35px; */
+        list-style-type: none; }
+        footer .footer-social ul li {
+          float: right;
+          /* padding: 9px; */
+          margin-top: 15px;
+          height: 50%;
+          text-align: center;
+          display: flex;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+          padding: 0 13px; }
+          footer .footer-social ul li img {
+            max-height: 20px;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            /* position: absolute; */ }
+        footer .footer-social ul li:not(:first-of-type) {
+          border-right: 1px solid rgba(255, 255, 255, 0.7);
+          display: block; }
+
+  .footer-legal,
+  .footer-social {
+    display: block; } }
+@media screen and (min-width: 1280px) {
+  .main-homepage h1 {
+    font-size: 40px; } }
 
 /*# sourceMappingURL=main.css.map */
