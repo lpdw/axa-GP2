@@ -48,7 +48,8 @@ window.addEventListener("load", function(){
 
     checkbox.forEach(function(box) {
       var checkDrop = box.parentElement.nextSibling.nextSibling,
-      allChecked = 0;
+      allChecked = 0,
+      value = box.value;
       var inputs = checkDrop.querySelectorAll("input");
       inputs.forEach(function(input){
         input.addEventListener("change", function() {
@@ -62,10 +63,9 @@ window.addEventListener("load", function(){
             // Aucun check
             box.nextSibling.nextSibling.querySelector('.checked .check').classList.add("hideimg");
             box.nextSibling.nextSibling.querySelector('.checked .tiret').classList.add("hideimg");
-            datasize = contentsize - parseInt(box.value);
-            // contentsize < parseInt(box.value)*1000 ? datasize = ((document.querySelector('.datasize').innerHTML*1000) - (parseInt(box.value)*1000)/1000) : datasize = parseInt(box.value);
-            document.querySelector('.datasize').innerHTML = datasize/1000;
             box.checked = false;
+            datasizeChange = (document.querySelector('.datasize').innerHTML)*1000;
+            document.querySelector('.datasize').innerHTML = (datasizeChange - value)/1000
           } else if (allChecked === 5) {
             // Tous check
             box.nextSibling.nextSibling.querySelector('.checked .check').classList.add("showimg");
@@ -78,11 +78,9 @@ window.addEventListener("load", function(){
             box.nextSibling.nextSibling.querySelector('.checked .check').classList.remove("showimg");
             box.nextSibling.nextSibling.querySelector('.checked .tiret').classList.add("showimg");
             box.nextSibling.nextSibling.querySelector('.checked .tiret').classList.remove("hideimg");
-            console.log(contentsize);
-            console.log(parseInt(box.value));
-            contentsize < parseInt(box.value) ? datasize = ((document.querySelector('.datasize').innerHTML*1000) + (parseInt(box.value)*1000)/1000) : datasize = parseInt(box.value);
-            document.querySelector('.datasize').innerHTML = datasize/1000;
             box.checked = true;
+            // datasize = (document.querySelector('.datasize').innerHTML)*1000;
+            // document.querySelector('.datasize').innerHTML = (datasize + value)/1000
           }
           allChecked = 0;
         });
