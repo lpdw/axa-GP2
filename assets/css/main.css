@@ -101,14 +101,30 @@ body {
     font-size: 12px;
     padding: 10px 10px;
     margin: 5px 0;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-box-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
     justify-content: space-between;
+    -webkit-box-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
     align-items: center;
     font-weight: bold;
     cursor: pointer; }
     .inputs .item .header-item .libelle {
       width: 70%;
       margin-left: 5px;
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
       flex: 1; }
     .inputs .item .header-item .size {
       font-size: 10px;
@@ -120,8 +136,21 @@ body {
         opacity: 0.5;
         width: 20px;
         height: 25px;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
         display: flex;
+        /* NEW, Spec - Firefox, Chrome, Opera */
+        -webkit-box-align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
         align-items: center;
+        -webkit-box-justify-content: center;
+        -webkit-justify-content: center;
+        -ms-justify-content: center;
         justify-content: center;
         background: url("../img/bg-input.png") center center;
         background-size: cover;
@@ -158,18 +187,47 @@ body {
       font-weight: 400; }
       .inputs .item .dropdown li label {
         cursor: pointer;
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
         display: flex;
+        /* NEW, Spec - Firefox, Chrome, Opera */
+        -webkit-box-align-items: center;
+        -webkit-align-items: center;
+        -ms-align-items: center;
         align-items: center;
+        -webkit-box-justify-content: space-between;
+        -webkit-justify-content: space-between;
+        -ms-justify-content: space-between;
         justify-content: space-between; }
         .inputs .item .dropdown li label span:first-child {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          -ms-flex: 1;
           flex: 1; }
         .inputs .item .dropdown li label .checked {
           margin-right: 2px;
           opacity: 0.5;
           width: 15px;
           height: 19px;
+          display: -webkit-box;
+          /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+          display: -ms-flexbox;
+          /* TWEENER - IE 10 */
+          display: -webkit-flex;
+          /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
           display: flex;
+          /* NEW, Spec - Firefox, Chrome, Opera */
+          -webkit-box-align-items: center;
+          -webkit-align-items: center;
+          -ms-align-items: center;
           align-items: center;
+          -webkit-box-justify-content: center;
+          -webkit-justify-content: center;
+          -ms-justify-content: center;
           justify-content: center;
           background: url("../img/bg-input.png") center center;
           background-size: cover;
@@ -192,8 +250,21 @@ body {
           display: inline-block; }
 
 .dl-button {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  -webkit-box-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
+  -webkit-box-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  -ms-justify-content: space-around;
   justify-content: space-around;
   cursor: pointer;
   width: 200px;
@@ -245,18 +316,51 @@ body {
 .section-2 {
   padding: 0;
   list-style: none;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  -webkit-box-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
+  -webkit-box-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   .section-2 li {
     width: 300px; }
     .section-2 li a {
       text-decoration: none;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
       display: flex;
+      /* NEW, Spec - Firefox, Chrome, Opera */
       opacity: 0.8; }
       .section-2 li a .content-book {
+        display: -webkit-box;
+        /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;
+        /* TWEENER - IE 10 */
+        display: -webkit-flex;
+        /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
         display: flex;
+        /* NEW, Spec - Firefox, Chrome, Opera */
+        -webkit-box-flex-direction: column;
+        -webkit-flex-flex-direction: column;
+        -ms-flex-direction: column;
         flex-direction: column; }
         .section-2 li a .content-book h3 {
           margin: 5px 0;
@@ -289,8 +393,21 @@ body {
     font-weight: bold;
     list-style: none; }
     .section-3 ul .cahier a {
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
       display: flex;
+      /* NEW, Spec - Firefox, Chrome, Opera */
+      -webkit-box-justify-content: space-between;
+      -webkit-justify-content: space-between;
+      -ms-justify-content: space-between;
       justify-content: space-between;
+      -webkit-box-align-items: center;
+      -webkit-align-items: center;
+      -ms-align-items: center;
       align-items: center;
       color: #000;
       font-style: normal;
