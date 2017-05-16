@@ -1,5 +1,12 @@
 window.addEventListener("load", function(){
 
+  /* Poly­fill IE / Microsoft Edge */
+
+  (function () {
+    if ( typeof NodeList.prototype.forEach === "function" ) return false;
+    NodeList.prototype.forEach = Array.prototype.forEach;
+})();
+
   var items = [].slice.call(document.getElementsByClassName('header-item')),
   checkbox = [].slice.call(document.getElementsByClassName('checkbox')),
   datasize = 0;
